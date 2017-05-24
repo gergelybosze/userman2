@@ -1,0 +1,16 @@
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+  <app-field
+    *ngFor="let controlName of formGroup.controlNames()"
+    [name]="controlName"
+    [control]="formGroup.controls[controlName]"
+    [(model)]="model[controlName]"
+    (modelChange)="onFieldChange($event)"
+  ></app-field>
+  <div *ngIf="!!formGroup.errorMessage" class="alert alert-danger" [innerHtml]="formGroup.errorMessage"></div>
+  <button *ngIf="formGroup.buttons.submit" type="submit" class="btn btn-primary" [disabled]="!formGroup.valid">
+    {{formGroup.buttons.submit.label}}
+  </button>
+  <button *ngIf="formGroup.buttons.reset" type="reset" class="btn btn-default" (click)="onReset()">
+    {{formGroup.buttons.reset.label}}
+  </button>
+</form>

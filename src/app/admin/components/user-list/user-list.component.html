@@ -1,0 +1,14 @@
+<h3>
+  UserList
+  <img *ngIf="loading" src="assets/loader.gif">
+</h3>
+<ul>
+  <li *ngFor="let user of users">
+    <app-user-list-item
+      [user]="user"
+      [disabled]="loading"
+      (onError)="loadUsers()"
+      (onDelete)="removeTask($event)"
+    ></app-user-list-item>
+  </li>
+</ul>
