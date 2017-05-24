@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import {
   AuthGuard,
-  NotFoundComponent
+  NotFoundComponent,
 } from './shared/shared.barrel'
 
 export const routes: Routes = [

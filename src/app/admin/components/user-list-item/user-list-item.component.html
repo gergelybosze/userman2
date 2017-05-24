@@ -1,5 +1,5 @@
-<input type="checkbox" [(ngModel)]="user.is_done" (change)="updateUser(user)" [disabled]="loading || disabled">
+
 <input type="text" [(ngModel)]="user.name" (change)="updateUser(user)" [disabled]="loading || disabled">
+<input type="text" [(ngModel)]="user.email" (change)="updateUser(user)" [disabled]="loading || disabled">
 <button class="btn btn-xs btn-danger" (click)="deleteUser(user)">Delete</button>
-<span class="small">{{user.created_at}}</span>
 <img *ngIf="loading" src="assets/loader.gif">

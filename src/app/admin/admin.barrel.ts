@@ -11,3 +11,4 @@ export * from './admin.routing';
 //export * from '../user/components/login/login.component';
 //export * from '../user/components/registration/registration.component';
 export * from './components/user-list/user-list.component';
+export * from './components/user-list-item/user-list-item.component';
