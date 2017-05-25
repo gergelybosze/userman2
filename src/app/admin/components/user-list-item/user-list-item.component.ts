@@ -1,9 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
-import {
-  User,
-  AdminService
-} from '../../admin.barrel';
+import { User } from '../../../user/user.barrel';
+import { AdminService } from '../../admin.barrel';
 
 import {
   Timekeeper
