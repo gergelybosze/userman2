@@ -1,5 +1,7 @@
 /**
  * Release notes:
+ *     v0.4 - 20170525 - BoszeG
+ *        if user is undefined
  *     v0.3 - 20170525 - BoszeG
  *        @Injectable() added to AdminAuthGuard
  *     v0.2 - 20170525 - BoszeG
@@ -33,7 +35,7 @@ export class AdminAuthGuard implements CanActivate {
   }
 
   public canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-    if ( this._authService.user.email.search("admin") == -1 )
+    if ( this._authService.user == undefined || this._authService.user.email.search("admin") == -1 )
       return false
     else
       return true;

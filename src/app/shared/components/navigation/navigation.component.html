@@ -1,7 +1,9 @@
 <!--/**
  * Release notes:
- *     20170525 - BoszeG
- *        Admin
+ *     v0.3 - 20170525 - BoszeG
+ *            ngIf for admin link
+ *     v0.2 - 20170525 - BoszeG
+ *            Admin
  */
  -->
  <nav class="navbar navbar-default">
@@ -23,7 +25,7 @@
         <li [routerLinkActive]="['active']">
           <a [routerLink]="['/task/list']">Tasks</a>
         </li>
-        <li [routerLinkActive]="['active']">
+        <li *ngIf="authService.user !== undefined && authService.user.email.search(&quot;admin&quot;) > -1" [routerLinkActive]="['active']">
           <a [routerLink]="['/admin/admin']">Admin</a>
         </li>
       </ul>
