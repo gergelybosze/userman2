@@ -3,6 +3,10 @@
   <img *ngIf="loading" src="assets/loader.gif">
 </h3>
 <ul>
+    <table>
+      <td width="180">User Név</td>
+      <td width="180">User E-mail</td>
+    </table>
   <li *ngFor="let user of users">
     <app-user-list-item
       [user]="user"

@@ -1,5 +1,5 @@
 
 <input type="text" [(ngModel)]="user.name" (change)="updateUser(user)" [disabled]="loading || disabled">
 <input type="text" [(ngModel)]="user.email" (change)="updateUser(user)" [disabled]="loading || disabled">
-<button class="btn btn-xs btn-danger" (click)="deleteUser(user)">Delete</button>
+<button class="btn btn-xs btn-danger" (click)="deleteUser(user)" >Delete</button>
 <img *ngIf="loading" src="assets/loader.gif">

@@ -1,3 +1,8 @@
+/**
+ * Release notes:
+ *     20170525 - BoszeG
+ *        AdminService
+ */
 import { Component, OnInit } from '@angular/core';
 
 import { User } from '../../../user/user.barrel';

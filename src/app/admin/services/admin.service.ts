@@ -1,3 +1,8 @@
+/**
+ * Release notes:
+ *     20170525 - BoszeG
+ *        AdminService methods from task.service
+ */
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs';

@@ -1,3 +1,8 @@
+/**
+ * Release notes:
+ *     20170525 - BoszeG
+ *        AdminAuthGuard
+ */
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -7,7 +12,8 @@ import {
   NavigationComponent,
   ApiService,
   AuthService,
-  AuthGuard
+  AuthGuard,
+  AdminAuthGuard
 } from './shared.barrel';
 
 @NgModule({
@@ -17,7 +23,7 @@ import {
   ],
   exports: [
     NotFoundComponent,
-    NavigationComponent
+    NavigationComponent,
   ],
   declarations: [
     NotFoundComponent,
@@ -26,7 +32,8 @@ import {
   providers: [
     ApiService,
     AuthService,
-    AuthGuard
+    AuthGuard,
+    AdminAuthGuard
   ]
 })
 export class SharedModule { }

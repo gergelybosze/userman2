@@ -1,3 +1,8 @@
+/**
+ * Release notes:
+ *     20170525 - BoszeG
+ *        AdminService
+ */
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';

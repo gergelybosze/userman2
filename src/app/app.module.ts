@@ -1,3 +1,8 @@
+/**
+ * Release notes:
+ *     20170525 - BoszeG
+ *        AdminModule
+ */
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';

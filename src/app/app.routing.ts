@@ -1,9 +1,15 @@
+/**
+ * Release notes:
+ *     20170525 - BoszeG
+ *        AdminAuthGuard
+ */
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import {
   AuthGuard,
+  AdminAuthGuard,
   NotFoundComponent,
 } from './shared/shared.barrel'
 
@@ -12,7 +18,7 @@ export const routes: Routes = [
   { path: 'home', loadChildren: 'app/home/home.module#HomeModule' },
   { path: 'user', loadChildren: 'app/user/user.module#UserModule' },
   { path: 'task', loadChildren: 'app/task/task.module#TaskModule', canActivate: [AuthGuard] },
-  { path: 'admin', loadChildren: 'app/admin/admin.module#AdminModule', canActivate: [AuthGuard] },
+  { path: 'admin', loadChildren: 'app/admin/admin.module#AdminModule', canActivate: [AdminAuthGuard] },
   { path: '**', component: NotFoundComponent }
 ];
 

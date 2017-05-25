@@ -1,3 +1,8 @@
+/**
+ * Release notes:
+ *     20170525 - BoszeG
+ *        AdminService
+ */
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { User } from '../../../user/user.barrel';
@@ -29,6 +34,9 @@ export class UserListItemComponent implements OnInit {
   }
 
   public updateUser(user: User) {
+    if (!window.confirm(`Are you sure to update "${user.name}"?`)) {
+      return;
+    }
     this.loading = true;
     this._adminService.update(
       user,
